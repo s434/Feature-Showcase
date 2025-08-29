@@ -40,7 +40,7 @@ export default function FeatureShowcase() {
     if (timerRef.current) clearInterval(timerRef.current);
 
     if (!released && inView && !hasPlayed && !isMobile) { // skip on mobile
-      const delayTimer = setTimeout(() => {
+      
       timerRef.current = setInterval(() => {
         setActive((prev) => {
           if (prev < features.length - 1) {
@@ -53,11 +53,9 @@ export default function FeatureShowcase() {
           }
         });
       }, 2000);
-    }, 5000);
     }
 
     return () => {
-      clearTimeout(delayTimer);
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [inView, released, hasPlayed, isMobile]);
