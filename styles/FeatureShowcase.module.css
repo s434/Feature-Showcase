@@ -6,7 +6,7 @@
   --bg: #ffffff;
 }
 
-/* Outer section is tall; sticky child sits inside it */
+
 .section {
   position: relative;
   background: var(--bg);
@@ -31,7 +31,7 @@
   position: sticky;
 }
 .stickyWrap.released {
-  position: relative; /* instead of sticky */
+  position: relative; 
 }
 
 .container {
@@ -92,7 +92,7 @@
   cursor: not-allowed;
 }
 
-/* CENTER PHONE (pure CSS iPhone-like frame) */
+/* CENTER PHONE  */
 .center {
   margin-top: 10px;
   display: grid;
@@ -205,7 +205,7 @@
   .bullets { text-align: left; }
   .item { padding: 14px; }
   .stickyWrap {
-    position: relative; /* disables sticky on mobile */
+    position: relative; 
     height: auto;
   }
 

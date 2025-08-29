@@ -6,7 +6,7 @@ import { features } from "@/lib/features";
 
 export default function FeatureShowcase() {
   const [active, setActive] = useState(0);
-  const [released, setReleased] = useState(false); // after last feature, release sticky
+  const [released, setReleased] = useState(false); 
   const [inView, setInView] = useState(false);
   const sectionRef = useRef(null);
   const timerRef = useRef(null);
@@ -21,7 +21,7 @@ export default function FeatureShowcase() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Observe when the section is in view (to start/stop auto-advance)
+
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
